@@ -1,0 +1,23 @@
+.file-upload{
+    padding: 2em 1em;
+    display: block;
+    text-align: center;
+
+    background-color: rgb(80, 145, 150);
+    box-shadow: rgba(85, 85, 85, 0.5) 0 0 3px 0;
+    box-sizing: border-box;
+    /*display: block;*/
+    line-height: 1em;
+    /*padding: 1em;*/
+    /*cursor: pointer;*/
+    width: 100%;
+    color: #eeeeee;
+}
+.file-upload input,
+.file-upload input[type="file" i] {
+    padding: 0.5em 1em;
+}
+#root > div > label > input[type=file]{
+    padding: 0.5em 1em;
+
+}

@@ -1,6 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Route, Routes} from "react-router-dom";
-import {useState} from "react";
 import "./Main.css"
 import Navigation from "../../organisms/Navigation/Navigation";
 import GeneralStatistic from "../../pages/GeneralStatistic";
@@ -10,6 +9,8 @@ import MostPointsScoredInAllGameTable from "../../pages/MostPointsScoredInAllGam
 import MostPointsScoredInAllGameByTeamTable from "../../pages/MostPointsScoredInAllGameByTeamTable";
 import MostPointsScoredInOneGameTable from "../../pages/MostPointsScoredInOneGameTable";
 import sanitizeData from "../../../utils/sanitizeData";
+import {DataContext} from "../../../contexts/DataContext";
+import Input from "../../atoms/Input/Input";
 
 function Main() {
 
@@ -33,14 +34,11 @@ function Main() {
     }
 
     return (
+        <DataContext.Provider value={{data, handleFileUpload}}>
             <main className="app-content">
 
-                <label className='file-upload'>
-                    Upload your data file:
-                    <input type="file" onChange={handleFileUpload}/>
-                </label>
-
-               <Navigation/>
+                <Input/>
+                <Navigation/>
 
                 <Routes>
                     <Route path="/" element={<GeneralStatistic/>}/>
@@ -51,6 +49,7 @@ function Main() {
                     <Route path="/most-players-points-by-team" element={<MostPointsScoredInAllGameByTeamTable/>}/>
                 </Routes>
             </main>
+        </DataContext.Provider>
     );
 }
 

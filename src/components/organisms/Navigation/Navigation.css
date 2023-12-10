@@ -10,6 +10,7 @@
 
 .nav-links a {
     text-transform: uppercase;
+    font-weight: 600;
     color: #222;
     padding: 1.5em 1em;
     flex-grow: 1;

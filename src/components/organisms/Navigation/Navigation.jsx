@@ -5,10 +5,10 @@ function Navigation() {
     return (
         <nav className="nav-links">
             <ul className="nav-links">
-                <NavLink to="/general-statistic" className={({isActive}) => (isActive ? "link-active" : "link")}>
+                <NavLink to="/" className={({isActive}) => (isActive ? "link-active" : "link")}>
                     All Players
                 </NavLink>
-                <NavLink to="/most-points" className={({isActive}) => (isActive ? "link-active" : "link")}>
+                <NavLink to="/most-points-in-game" className={({isActive}) => (isActive ? "link-active" : "link")}>
                     Top Players in a Game
                 </NavLink>
                 <NavLink to="/most-points-in-all-games" className={({isActive}) => (isActive ? "link-active" : "link")}>
@@ -20,7 +20,7 @@ function Navigation() {
                 <NavLink to="/most-team-points" className={({isActive}) => (isActive ? "link-active" : "link")}>
                     Top Teams
                 </NavLink>
-                <NavLink to="/most-points-by-team" className={({isActive}) => (isActive ? "link-active" : "link")}>
+                <NavLink to="/most-players-points-by-team" className={({isActive}) => (isActive ? "link-active" : "link")}>
                     Top Players in Each Team
                 </NavLink>
 

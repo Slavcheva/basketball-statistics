@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserat&display=swap');
+
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -10,5 +12,12 @@ html {
 
 
 body {
+  font-family: Montserat, "Helvetica Neue", Arial, Helvetica, sans-serif;
+
   background: rgb(238, 238, 238);
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
 }

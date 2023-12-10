@@ -9,19 +9,19 @@ function Navigation() {
                     All Players
                 </NavLink>
                 <NavLink to="/most-points" className={({isActive}) => (isActive ? "link-active" : "link")}>
-                   Best Player in a Game
+                    Top Players in a Game
                 </NavLink>
                 <NavLink to="/most-points-in-all-games" className={({isActive}) => (isActive ? "link-active" : "link")}>
-                    Best Player in All Game
+                    Top Players in All Game
                 </NavLink>
                 <NavLink to="/most-points-by-time" className={({isActive}) => (isActive ? "link-active" : "link")}>
-                    Best Player in a Game per Time
+                    Top Players per Time in a Game
                 </NavLink>
                 <NavLink to="/most-team-points" className={({isActive}) => (isActive ? "link-active" : "link")}>
                     Top Teams
                 </NavLink>
                 <NavLink to="/most-points-by-team" className={({isActive}) => (isActive ? "link-active" : "link")}>
-                    Best Player in Each Team
+                    Top Players in Each Team
                 </NavLink>
 
             </ul>

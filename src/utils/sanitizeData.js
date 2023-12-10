@@ -13,7 +13,7 @@ function convertArrToMatrix(arr) {
 function sanitizeData(str) {
     const arrData = convertStrToArr(str);
     return convertArrToMatrix(arrData);
-     
+
 }
 
 export default sanitizeData;

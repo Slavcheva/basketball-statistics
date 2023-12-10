@@ -1,0 +1,28 @@
+.app-header {
+    background: center/cover no-repeat url("../../../assets/banner.jpg") rgba(80, 145, 150, 0.8);
+    background-blend-mode: multiply;
+    color: rgb(255, 255, 255);
+}
+
+.app-header .banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em 1em 5em 1em;
+}
+
+.app-header .logo-wrapper{
+    width: 5em;
+}
+
+.app-header .logo-wrapper img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.app-header h1{
+    font-size: 5em;
+    margin-left: 0.2em;
+}

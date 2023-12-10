@@ -1,11 +1,10 @@
 import './App.css';
+import Header from "./components/templates/Header/Header";
 
 function App() {
     return (
         <div className="app-wrapper">
-            <header className="app-header">
-                <h1>Basketball Statistic</h1>
-            </header>
+            <Header/>
             <main>
 
             </main>

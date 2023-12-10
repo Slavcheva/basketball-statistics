@@ -1,0 +1,9 @@
+.app-footer{
+    display: flex;
+    background: rgb(80, 145, 150);
+    padding: 1em;
+    color: rgb(255, 255, 255);
+}
+.app-footer .version{
+    margin-left: auto;
+}

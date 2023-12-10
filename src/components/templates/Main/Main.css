@@ -1,0 +1,4 @@
+.app-content{
+    flex:1 1 auto;
+    background: center/cover no-repeat url("../../../assets/home-bg.jpg");
+}

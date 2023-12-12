@@ -1,9 +1,21 @@
 import React from 'react';
-import StatisticPage from "../templates/StatisticPage/StatisticPage";
+import StatisticComponent from "../templates/StatisticComponent/StatisticComponent";
 
 function MostPointsScoredByTimeTable() {
 
-    return <StatisticPage pageTitle={"Таблица за вкарани точки на база играно време"}/>
+    const headings = [
+        "Player Name",
+        "Team",
+        "Time",
+        "Points Score",
+        "Points Score per Time",
+    ]
+
+    return <StatisticComponent
+        pageTitle={"Таблица за вкарани точки на база играно време"}
+        headings={headings}
+        sortCriterion={"Points Score per Time"}
+    />
 }
 
 export default MostPointsScoredByTimeTable;

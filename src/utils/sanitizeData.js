@@ -10,9 +10,15 @@ function convertArrToMatrix(arr) {
         }));
 }
 
+function removeEmptyElements(arr) {
+    return arr.map(row=>row.filter(e=>e.length!==0));
+}
+
 function sanitizeData(str) {
     const arrData = convertStrToArr(str);
-    return convertArrToMatrix(arrData);
+    const convertedData = convertArrToMatrix(arrData)
+
+    return removeEmptyElements(convertedData);
 
 }
 

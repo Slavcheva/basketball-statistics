@@ -1,5 +1,18 @@
 .home-page {
     padding: 3em;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
+
+}
+
+.home-page h4 {
+    font-size: 1.5em;
+}
+
+.home-page h4.error {
+    color: red;
+}
+
+.home-page p{
+    padding-top: 1em;
 }

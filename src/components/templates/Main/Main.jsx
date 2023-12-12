@@ -12,10 +12,12 @@ import sanitizeData from "../../../utils/sanitizeData";
 import {DataContext} from "../../../contexts/DataContext";
 import Input from "../../atoms/Input/Input";
 import Home from "../../pages/Home/Home";
+import {isInvalidData} from "../../../utils/validateData";
 
 function Main() {
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]);
+    const [errors, setErrors] = useState([]);
 
 
     function handleFileUpload(e) {
@@ -29,7 +31,11 @@ function Main() {
                 const dataString = reader.result;
                 const sanitizedData = sanitizeData(dataString);
 
-                setData(sanitizedData);
+                if (!isInvalidData(sanitizedData).length) {
+                    setData(sanitizedData);
+                } else {
+                    setErrors(isInvalidData(sanitizedData));
+                }
             }
         }
     }
@@ -54,7 +60,7 @@ function Main() {
                             </Routes>
                         </div>
                     </>
-                    : <Home/>
+                    : <Home errors={errors}/>
                 }
             </main>
         </DataContext.Provider>

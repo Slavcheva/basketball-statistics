@@ -1,9 +1,18 @@
 import React from 'react';
-import StatisticPage from "../templates/StatisticPage/StatisticPage";
+import StatisticComponent from "../templates/StatisticComponent/StatisticComponent";
 
 function MostPointsScoredInOneGameTable() {
 
-    return <StatisticPage pageTitle={"Таблица за най-много вкарани точки в един мач"}/>
-}
+    const headings = [
+        "Player Name",
+        "Team",
+        "Points Score",
+    ]
+
+    return <StatisticComponent
+        pageTitle={"Таблица за най-много вкарани точки в един мач"}
+        headings={headings}
+        sortCriterion={"Points Score"}
+    />}
 
 export default MostPointsScoredInOneGameTable;

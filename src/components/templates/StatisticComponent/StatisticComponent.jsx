@@ -15,16 +15,9 @@ function StatisticComponent({
                             }) {
 
     const {data} = useContext(DataContext);
-    let modifiedData = [];
 
-
-    if (filteredData) {
-        modifiedData = modifyData(filteredData, headings, reduceCriterion);
-
-    } else {
-        modifiedData = modifyData(data, headings, reduceCriterion);
-    }
-
+    let currentData = filteredData || data;
+    const modifiedData = modifyData(currentData, headings, reduceCriterion);
 
     if (sortCriterion) {
         sortData(modifiedData, sortCriterion)

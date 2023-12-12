@@ -11,6 +11,7 @@ export default function Home({errors}) {
                     {errors.map(error =>
                         <h4 key={error} className="error">Data on row {error} is invalid</h4>)}
                     <p>In order to receive correct statistics, it is necessary to submit valid data.</p>
+                    <p>Please correct the data and upload the file again.</p>
                 </>
             }
         </div>

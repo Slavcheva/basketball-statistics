@@ -34,6 +34,7 @@ function Main() {
                 if (!isInvalidData(sanitizedData).length) {
                     setData(sanitizedData);
                 } else {
+                    e.target.value = null;
                     setErrors(isInvalidData(sanitizedData));
                 }
             }

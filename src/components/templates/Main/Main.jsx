@@ -11,6 +11,7 @@ import MostPointsScoredInOneGameTable from "../../pages/MostPointsScoredInOneGam
 import sanitizeData from "../../../utils/sanitizeData";
 import {DataContext} from "../../../contexts/DataContext";
 import Input from "../../atoms/Input/Input";
+import Home from "../../pages/Home/Home";
 
 function Main() {
 
@@ -39,15 +40,22 @@ function Main() {
 
                 <Input handleFileUpload={handleFileUpload}/>
                 <Navigation/>
-
-                <Routes>
-                    <Route path="/" element={<GeneralStatistic/>}/>
-                    <Route path="/most-points-in-game" element={<MostPointsScoredInOneGameTable/>}/>
-                    <Route path="/most-points-in-all-games" element={<MostPointsScoredInAllGameTable/>}/>
-                    <Route path="/most-points-by-time" element={<MostPointsScoredByTimeTable/>}/>
-                    <Route path="/most-team-points" element={<MostPointsScoredByTeamTable/>}/>
-                    <Route path="/most-players-points-by-team" element={<MostPointsScoredInAllGameByTeamTable/>}/>
-                </Routes>
+                {!!data.length
+                    ? <>
+                        <div className="statistic-page">
+                            <Routes>
+                                <Route path="/" element={<GeneralStatistic/>}/>
+                                <Route path="/most-points-in-game" element={<MostPointsScoredInOneGameTable/>}/>
+                                <Route path="/most-points-in-all-games" element={<MostPointsScoredInAllGameTable/>}/>
+                                <Route path="/most-points-by-time" element={<MostPointsScoredByTimeTable/>}/>
+                                <Route path="/most-team-points" element={<MostPointsScoredByTeamTable/>}/>
+                                <Route path="/most-players-points-by-team"
+                                       element={<MostPointsScoredInAllGameByTeamTable/>}/>
+                            </Routes>
+                        </div>
+                    </>
+                    : <Home/>
+                }
             </main>
         </DataContext.Provider>
     );

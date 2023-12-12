@@ -1,9 +1,7 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import "./Input.css"
-import {DataContext} from "../../../contexts/DataContext";
 
-function Input() {
-    const {handleFileUpload} = useContext(DataContext)
+function Input({handleFileUpload}) {
 
     return (
         <label className='file-upload'>

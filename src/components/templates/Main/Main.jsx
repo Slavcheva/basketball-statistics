@@ -34,10 +34,10 @@ function Main() {
     }
 
     return (
-        <DataContext.Provider value={{data, handleFileUpload}}>
+        <DataContext.Provider value={{data}}>
             <main className="app-content">
 
-                <Input/>
+                <Input handleFileUpload={handleFileUpload}/>
                 <Navigation/>
 
                 <Routes>

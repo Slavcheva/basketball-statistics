@@ -1,10 +1,19 @@
 import React from 'react';
-import StatisticPage from "../templates/StatisticPage/StatisticPage";
+import StatisticComponent from "../templates/StatisticComponent/StatisticComponent";
 
 function MostPointsScoredByTeamTable() {
 
-    return <StatisticPage pageTitle={"Таблица за вкарани точки на база отбор"}/>
+    const headings = [
+        "Team",
+        "Points Score",
+    ]
 
+    return <StatisticComponent
+        pageTitle={"Таблица за вкарани точки на база отбор"}
+        headings={headings}
+        sortCriterion={"Points Score"}
+        reduceCriterion={"Team"}
+    />
 }
 
 export default MostPointsScoredByTeamTable;

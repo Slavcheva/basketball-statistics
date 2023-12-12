@@ -1,9 +1,19 @@
 import React from 'react';
-import StatisticPage from "../templates/StatisticPage/StatisticPage";
+import StatisticComponent from "../templates/StatisticComponent/StatisticComponent";
 
 function GeneralStatistic() {
 
-    return <StatisticPage pageTitle={"Таблица с цялата информация от файла"}/>
+    const headings = [
+        "Player Name",
+        "Team",
+        "Time",
+        "Points Score",
+    ]
+
+    return <StatisticComponent
+        headings={headings}
+        pageTitle={"Таблица с цялата информация от файла"}
+    />
 }
 
 export default GeneralStatistic;

@@ -10,7 +10,7 @@ export function modifyData(arr, headings, reduceCriterion) {
         }
         const newObj = {};
 
-        headings.map(h => {
+        headings.forEach(h => {
             if (obj.hasOwnProperty(h)) {
                 newObj[h] = obj[h];
             }
@@ -53,15 +53,4 @@ function createUniqueElements(data, reduceCriterion) {
     data.map(o => elementsSet.add(o[reduceCriterion]));
 
     return [...elementsSet]
-}
-
-
-export function selectData(fileData, jsonData) {
-    const jsonModifyData = jsonData.map(e => {
-        return Object.values(e)
-    });
-
-    let selectData = [fileData, jsonModifyData].filter(d => d.length !== 0);
-
-    return selectData[0];
 }

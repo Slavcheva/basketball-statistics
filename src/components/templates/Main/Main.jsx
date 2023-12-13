@@ -13,7 +13,8 @@ import {DataContext} from "../../../contexts/DataContext";
 import Input from "../../atoms/Input/Input";
 import Home from "../../pages/Home/Home";
 import {isInvalidData} from "../../../utils/validateData";
-import {selectData} from "../../../utils/modifyData";
+import {selectData} from "../../../utils/selectData";
+import Heading from "../../atoms/Heading/Heading";
 
 function Main() {
 
@@ -41,7 +42,6 @@ function Main() {
                 }
             }
         }
-
     }
 
     async function handleLoadDataFromDB(e) {
@@ -56,9 +56,10 @@ function Main() {
         }
     }
 
-    const data = selectData(fileData, jsonData);
+    const data = selectData(fileData, jsonData)[0];
+    const dataSource = selectData(fileData, jsonData)[1];
 
-     return (
+    return (
         <DataContext.Provider value={{data}}>
             <main className="app-content">
                 <div className="buttons">
@@ -77,6 +78,7 @@ function Main() {
                     />
                 </div>
                 <Navigation/>
+                <Heading type={"h5"} value={dataSource}/>
                 {!!(fileData.length || jsonData.length)
                     ? <>
                         <div className="statistic-page">
@@ -95,8 +97,7 @@ function Main() {
                 }
             </main>
         </DataContext.Provider>
-    )
-        ;
+    );
 }
 
 

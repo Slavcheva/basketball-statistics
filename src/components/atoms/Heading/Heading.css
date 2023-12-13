@@ -1,9 +1,19 @@
-h2{
-    padding-bottom: 2em;
+h2 {
+    padding: 0;
     text-align: center;
 }
 
-h3{
+h3 {
     margin: 3em 0 -4em 0;
     text-align: center;
+}
+
+h5 {
+    padding-top: 1em;
+    padding-right: 1em;
+    text-align: right;
+    font-weight: 400;
+    color: rgb(80, 145, 150);
+    font-size: 1em;
+    font-style: italic;
 }

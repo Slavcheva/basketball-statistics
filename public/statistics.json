@@ -1,0 +1,88 @@
+{
+  "statistic": [
+    {
+      "Player Name": "Ivan Ivanov",
+      "Team": "Dunav Ruse",
+      "Time": "600",
+      "Points Score": "14"
+    },
+    {
+      "Player Name": "Marin Kolev",
+      "Team": "Cherno More Varna",
+      "Time": "820",
+      "Points Score": "12"
+    },
+    {
+      "Player Name": "Stanimir Stoilov",
+      "Team": "Lukoil Neftohimik",
+      "Time": "250",
+      "Points Score": "20"
+    },
+    {
+      "Player Name": "Hristo Hristov",
+      "Team": "Dunav Ruse",
+      "Time": "60",
+      "Points Score": "10"
+    },
+    {
+      "Player Name": "Venelin Hristov",
+      "Team": "Cherno More Varna",
+      "Time": "130",
+      "Points Score": "30"
+    },
+    {
+      "Player Name": "Hristo Hristov",
+      "Team": "Dunav Ruse",
+      "Time": "160",
+      "Points Score": "18"
+    },
+    {
+      "Player Name": "Mitko Martinov",
+      "Team": "Lukoil Neftohimik",
+      "Time": "160",
+      "Points Score": "40"
+    },
+    {
+      "Player Name": "Mart Adem",
+      "Team": "Cherno More Varna",
+      "Time": "100",
+      "Points Score": "16"
+    },
+    {
+      "Player Name": "Asen Velikov",
+      "Team": "Levski",
+      "Time": "140",
+      "Points Score": "44"
+    },
+    {
+      "Player Name": "Ivan Dimitrov",
+      "Team": "CSKA",
+      "Time": "190",
+      "Points Score": "11"
+    },
+    {
+      "Player Name": "Ivan Dimitrov",
+      "Team": "CSKA",
+      "Time": "400",
+      "Points Score": "31"
+    },
+    {
+      "Player Name": "Marin Kocev",
+      "Team": "Cherno More Varna",
+      "Time": "120",
+      "Points Score": "25"
+    },
+    {
+      "Player Name": "Dean Lazarov",
+      "Team": "CSKA",
+      "Time": "230",
+      "Points Score": "29"
+    },
+    {
+      "Player Name": "Georgi Cekov",
+      "Team": "CSKA",
+      "Time": "183",
+      "Points Score": "33"
+    }
+  ]
+}

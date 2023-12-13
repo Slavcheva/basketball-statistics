@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {DataContext} from "../../contexts/DataContext";
-import Heading from "../atoms/Heading/Heading";import StatisticComponent from "../templates/StatisticComponent/StatisticComponent";
+import Heading from "../atoms/Heading/Heading";
+import StatisticComponent from "../templates/StatisticComponent/StatisticComponent";
 
 function MostPointsScoredInAllGameByTeamTable() {
 

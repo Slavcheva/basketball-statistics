@@ -13,12 +13,13 @@ import {DataContext} from "../../../contexts/DataContext";
 import Input from "../../atoms/Input/Input";
 import Home from "../../pages/Home/Home";
 import {isInvalidData} from "../../../utils/validateData";
+import {selectData} from "../../../utils/modifyData";
 
 function Main() {
 
-    const [data, setData] = useState([]);
+    const [fileData, setFileData] = useState([]);
+    const [jsonData, setJsonData] = useState([]);
     const [errors, setErrors] = useState([]);
-
 
     function handleFileUpload(e) {
         e.preventDefault();
@@ -26,28 +27,57 @@ function Main() {
         const reader = new FileReader();
         if (file != null && file.size > 0) {
             reader.readAsText(file);
+            setJsonData([]);
 
             reader.onload = function () {
                 const dataString = reader.result;
                 const sanitizedData = sanitizeData(dataString);
 
                 if (!isInvalidData(sanitizedData).length) {
-                    setData(sanitizedData);
+                    setFileData(sanitizedData);
                 } else {
-                    e.target.value = null;
                     setErrors(isInvalidData(sanitizedData));
+                    e.target.value = null;
                 }
             }
         }
+
     }
 
-    return (
+    async function handleLoadDataFromDB(e) {
+        e.preventDefault();
+
+        try {
+            const result = await (await fetch(`statistics.json`)).json()
+            setJsonData(result["statistic"]);
+            setFileData([]);
+        } catch (err) {
+            console.log(err.message)
+        }
+    }
+
+    const data = selectData(fileData, jsonData);
+
+     return (
         <DataContext.Provider value={{data}}>
             <main className="app-content">
-
-                <Input handleFileUpload={handleFileUpload}/>
+                <div className="buttons">
+                    <Input
+                        handleLoadDataFromDB={handleLoadDataFromDB}
+                        className={"json-load"}
+                        type={"submit"}
+                        value={"Load data"}
+                        labelText={"Load data from Database:"}
+                    />
+                    <Input
+                        handleFileUpload={handleFileUpload}
+                        className={"file-upload"}
+                        type={"file"}
+                        labelText={"Upload your data file:"}
+                    />
+                </div>
                 <Navigation/>
-                {!!data.length
+                {!!(fileData.length || jsonData.length)
                     ? <>
                         <div className="statistic-page">
                             <Routes>
@@ -65,7 +95,8 @@ function Main() {
                 }
             </main>
         </DataContext.Provider>
-    );
+    )
+        ;
 }
 
 

@@ -6,7 +6,7 @@ export function modifyData(arr, headings, reduceCriterion) {
             "Team": row[1],
             "Time": row[2],
             "Points Score": row[3],
-            "Points Score per Time": row[3] / row[2],
+            "Points Score per Time": (row[3] / row[2]).toFixed(3),
         }
         const newObj = {};
 
@@ -53,4 +53,15 @@ function createUniqueElements(data, reduceCriterion) {
     data.map(o => elementsSet.add(o[reduceCriterion]));
 
     return [...elementsSet]
+}
+
+
+export function selectData(fileData, jsonData) {
+    const jsonModifyData = jsonData.map(e => {
+        return Object.values(e)
+    });
+
+    let selectData = [fileData, jsonModifyData].filter(d => d.length !== 0);
+
+    return selectData[0];
 }

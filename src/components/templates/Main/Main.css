@@ -1,5 +1,9 @@
 .app-content{
     flex:1 1 auto;
     background: white;
-    /*background: center/cover no-repeat url("../../../assets/home-bg.jpg");*/
+}
+
+.app-content .buttons{
+    display: flex;
+    background-color: rgb(80, 145, 150);
 }

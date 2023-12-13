@@ -1,15 +1,43 @@
-.file-upload{
-    padding: 1.6em 1em;
-    display: block;
-    text-align: center;
-    background-color: rgb(80, 145, 150);
+.buttons > div{
+    padding: 1em;
     width: 100%;
     color: #eeeeee;
     font-weight: 600;
 }
 
-.file-upload input,
-.file-upload input[type="file" i] {
-    padding: 0.5em 1em;
+.buttons > div label{
+    display: block;
+}
+
+.buttons > div input{
     font-size: 1em;
+}
+
+.buttons > div.file-upload{
+    text-align: left;
+    border-left: 2px solid  rgb(185, 185, 185);
+    padding-left: 4em;
+}
+
+.buttons > div.file-upload input,
+.buttons > div.file-upload input[type="file" i] {
+    padding: 0.5em 1em;
+}
+
+.buttons > div.json-load{
+    text-align: right;
+    font-weight: 600;
+    padding-right: 4em;
+}
+
+.buttons > div.json-load label{
+    margin-top: 0.6em;
+}
+
+.buttons > div.json-load input[type="submit"] {
+    padding: 0.1em 1em;
+    margin-left: 1em;
+    background: #ffffff;
+    border-radius: 0.17em;
+    border: 1px solid #767676;
 }

@@ -1,13 +1,29 @@
 import React from 'react';
 import "./Input.css"
 
-function Input({handleFileUpload}) {
+function Input(
+    {
+        handleLoadDataFromDB,
+        handleFileUpload,
+        className,
+        type,
+        value,
+        labelText,
+    }
+) {
 
     return (
-        <label className='file-upload'>
-            Upload your data file:
-            <input type="file" onChange={handleFileUpload}/>
-        </label>
+        <div className={className}>
+            <label>
+                {labelText}
+                <input
+                    type={type}
+                    value={value}
+                    onChange={handleFileUpload}
+                    onClick={handleLoadDataFromDB}
+                />
+            </label>
+        </div>
     );
 }
 

@@ -1,14 +1,14 @@
-# Getting Started with Create React App
+# Basketball Statistics App - Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Online Basketball Statistics App for loading and viewing basketball statistics, implemented using React. The application allows visitors to upload their own txt file with csv data to see different statistics tables or to load data from the database.
 
-## Available Scripts
+A sample file: statistics.txt in the folder src/data can be used to test the app.
 
-In the project directory, you can run:
+## Resolve Dependencies
+When the project is cloned or downloaded, use the following command in the terminal in the project directory to install the necessary dependencies:
+### `npm install`
 
+
+## Run the React app
+The app uses React. To run the React app type in the terminal in the project directory:
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-А sample file: statistics.txt in src/data can be used to test the app.

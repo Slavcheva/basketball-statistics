@@ -12,7 +12,7 @@ function Navigation() {
                     Top Players in a Game
                 </NavLink>
                 <NavLink to="/most-points-in-all-games" className={({isActive}) => (isActive ? "link-active" : "link")}>
-                    Top Players in All Game
+                    Top Players in All Games
                 </NavLink>
                 <NavLink to="/most-points-by-time" className={({isActive}) => (isActive ? "link-active" : "link")}>
                     Top Players per Time in a Game

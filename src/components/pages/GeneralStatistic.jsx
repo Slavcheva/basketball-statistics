@@ -12,7 +12,7 @@ function GeneralStatistic() {
 
     return <StatisticComponent
         headings={headings}
-        pageTitle={"Таблица с цялата информация от файла"}
+        pageTitle={"Table with the entire information"}
     />
 }
 

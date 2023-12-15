@@ -12,7 +12,7 @@ function MostPointsScoredByTimeTable() {
     ]
 
     return <StatisticComponent
-        pageTitle={"Таблица за вкарани точки на база играно време"}
+        pageTitle={"Table for the most points scored based on playing time"}
         headings={headings}
         sortCriterion={"Points Score per Time"}
     />

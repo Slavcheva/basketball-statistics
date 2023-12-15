@@ -9,7 +9,7 @@ function MostPointsScoredByTeamTable() {
     ]
 
     return <StatisticComponent
-        pageTitle={"Таблица за вкарани точки на база отбор"}
+        pageTitle={"Table for points scored based on team"}
         headings={headings}
         sortCriterion={"Points Score"}
         reduceCriterion={"Team"}

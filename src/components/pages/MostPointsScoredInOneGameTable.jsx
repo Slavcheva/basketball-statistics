@@ -10,7 +10,7 @@ function MostPointsScoredInOneGameTable() {
     ]
 
     return <StatisticComponent
-        pageTitle={"Таблица за най-много вкарани точки в един мач"}
+        pageTitle={"Table for the most points scored in a single game."}
         headings={headings}
         sortCriterion={"Points Score"}
     />}

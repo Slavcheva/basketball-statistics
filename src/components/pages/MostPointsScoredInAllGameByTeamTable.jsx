@@ -25,7 +25,7 @@ function MostPointsScoredInAllGameByTeamTable() {
     )
 
     return (<>
-            <Heading type={'h2'} value={"Таблица за най добър играч във всеки отбор на база вкарани точки"}/>
+            <Heading type={'h2'} value={"Table for the top players in each team based on points scored"}/>
             {groupedData.map(o => (
                 <div style={{width: "100%"}} key={Object.keys(o)}>
                     <Heading type={'h3'} value={`Top players in ${Object.keys(o)}`}/>

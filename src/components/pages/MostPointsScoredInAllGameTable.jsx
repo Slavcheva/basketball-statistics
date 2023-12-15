@@ -10,7 +10,7 @@ function MostPointsScoredInAllGameTable() {
     ]
 
     return <StatisticComponent
-        pageTitle={"Таблица за най-много вкарани точки във всички мачове"}
+        pageTitle={"Table for the most points scored in all matches"}
         headings={headings}
         sortCriterion={"Points Score"}
         reduceCriterion={"Player Name"}
